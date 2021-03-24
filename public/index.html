@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="table-container">
+        <table class="table">
+            <script> 
+            router.get("/dining/:hall_id", async (req, res) => {
+                try {
+                  const hall = await db.DiningHall.findAll({
+                    where: {
+                      hall_id: req.params.hall_id,
+                    },
+                  });
+                  res.json(hall);
+                } catch (err) {
+                  console.error(err);
+                  res.error("Server error");
+                }
+              });
+            </script>
+        </table>
+      </div>
+    <script src="script.js"></script>
+  </body>
+</html>
