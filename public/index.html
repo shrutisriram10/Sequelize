@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,23 +7,23 @@
   </head>
   <body>
     <div class="table-container">
-        <table class="table">
-            <script> 
-            router.get("/dining/:hall_id", async (req, res) => {
-                try {
-                  const hall = await db.DiningHall.findAll({
-                    where: {
-                      hall_id: req.params.hall_id,
-                    },
-                  });
-                  res.json(hall);
-                } catch (err) {
-                  console.error(err);
-                  res.error("Server error");
-                }
-              });
-            </script>
-        </table>
-      </div>
+      <table class="table">
+          <script> 
+          router.get("/dining/:hall_id", async (req, res) => {
+              try {
+                const hall = await db.DiningHall.findAll({
+                  where: {
+                    hall_id: req.params.hall_id,
+                  },
+                });
+                res.json(hall);
+              } catch (err) {
+                console.error(err);
+                res.error("Server error");
+              }
+            });
+          </script>
+      </table>
+    </div>
   </body>
 </html>
