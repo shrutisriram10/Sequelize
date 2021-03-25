@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
-    <script src="script.js"></script>
+    <title>Shruti Sriram's W8</title>
   </head>
   <body>
-    <div class="table-container">
-      <table class="table">
-          <script> 
-          router.get("/dining/:hall_id", async (req, res) => {
-              try {
-                const hall = await db.DiningHall.findAll({
-                  where: {
-                    hall_id: req.params.hall_id,
-                  },
-                });
-                res.json(hall);
-              } catch (err) {
-                console.error(err);
-                res.error("Server error");
-              }
-            });
-          </script>
-      </table>
-    </div>
+    <h1>Shruti Sriram Lab 6</h1> 
+    <table>
+      <thead>
+        <tr> 
+        <th>Meal ID</th>
+        <th>Name</th>
+        <th>Calories</th>
+        <th>Carbs</th>
+        <th>Sodium</th>
+        <th>Protein</th>
+        <th>Fat</th>
+        <th>Cholestrol</th>
+       </tr>
+      </thead>
+    </table>
+    <script src="script.js"></script>
   </body>
 </html>
