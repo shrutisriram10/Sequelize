@@ -22,5 +22,25 @@ async function bootServer() {
     console.error(err);
   }
 }
+/*
+import express from 'express';
+import db from './database/initializeDB.js';
+import apiRoutes from './routes/apiRoutes.js';
+import diningRoute from './routes/diningRoute.js';
+import mealsRoute from './routes/mealsRoute.js';
+import macrosRoute from './routes/macrosRoute.js';
+import restrictionsRoute from './routes/restrictionsRoute.js';
 
-bootServer();
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+app.use(express.static('public'));
+app.use('/api', apiRoutes);
+app.use('/api/dining', diningRoute);
+app.use('/api/meals', mealsRoute);
+app.use('/api/macros', macrosRoute);
+app.use('/api/restrictions', restrictionsRoute);*/

@@ -1,0 +1,13 @@
+body {
+    font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+    background:lightskyblue;
+    color: rgb(0, 0, 0);
+    padding: 50px;
+    align-self: center;
+  }
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 3rem;
+      text-align: center;
+      font-weight: 800;
+}
