@@ -22,3 +22,5 @@ async function bootServer() {
     console.error(err);
   }
 }
+
+bootServer();
