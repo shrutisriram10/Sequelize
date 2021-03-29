@@ -1,28 +1,24 @@
 async  function dininghalls(){
-    const request = await fetch('api/macros')
-    const data = request.json()
-
-    const diningdata = data;
-    const target = document.querySelector('#target');
+    const request = await fetch('api/dining');
+    const data = request.json();
+    console.log(data);
+    const diningdata = data.data;
+    const target = document.querySelector('.tbody');
+    /*
     diningdata.forEach((item) => {
-        const mealID = item.mealID;
-        const calories = item.calories;
-        const carbs = item.carbs;
-        const sodium = item.sodium;
-        const protein = item.protein;
-        const fat = item.fat;
-        const chlorestrol = item.chlorestrol;
+        const hallID = item.hall_id;
+        const hallname = item.hall_name;
+        const halllocation = item.hall_address;
         return `
             <tr>
-                <th>${MealID}</th>
-                <td>${Name}</td>
-                <td>${Calories}</td>
-                <td>${Carbs}</td>
-                <td>${Sodium}</td>
-                <td>${Protein}</td>
-                <td>${Fat}</td>
-                <td>${Chloesterol}</td>
+                <th>${hallID}</th>
+                <td>${hallname}</td>
+                <td>${halllocation}</td>
             </tr>
             `;
-    })
+    })*/
 }
+async function windowActions(){
+    dininghalls();
+}
+window.onload=windowActions;
